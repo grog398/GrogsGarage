@@ -1,0 +1,121 @@
+mods.GrogsGarage.name=Grog's Garage
+
+############
+# ENTITIES #
+############
+
+# Date Counter Controller
+
+entities.GrogsGarage/Ports/DateCounterController.placements.name.DateCounterController=Date Counter Controller
+entities.GrogsGarage/Ports/DateCounterController.placements.description.DateCounterController=Sets various counters based on how far the current time is from a specified date.
+
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.month=Month
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.day=Day
+
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.dayCounter=Output Counter (Days)
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.hourCounter=Output Counter (Hours)
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.minuteCounter=Output Counter (Minutes)
+entities.GrogsGarage/Ports/DateCounterController.attributes.name.secondCounter=Output Counter (Seconds)
+
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.month=The month to set the target to (between 1-12).
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.day=The day to set the target to (between 1-31).
+
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.dayCounter=The counter that will be set to the number of days until the target date.
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.hourCounter=The counter that will be set to the number of hours until the target date.
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.minuteCounter=The counter that will be set to the number of minutes until the target date.
+entities.GrogsGarage/Ports/DateCounterController.attributes.description.secondCounter=The counter that will be set to the number of seconds until the target date.
+
+# Death Redirect Controller
+
+entities.GrogsGarage/Ports/DeathRedirectController.placements.name.DeathRedirectController=Death Redirect Controller
+entities.GrogsGarage/Ports/DeathRedirectController.placements.description.DeathRedirectController=Instead of dying, teleport the player to the specified room when a flag is active.
+
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.name.flag=Flag
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.name.room=Target Room Name
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.name.priority=Controller Priority
+
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.description.flag=When this flag is active, teleport the player on death.
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.description.room=The room to teleport the player to.
+entities.GrogsGarage/Ports/DeathRedirectController.attributes.description.priority=If there are multiple active controllers in a room, the one with higher priority takes precedence.
+
+# Entity Cull Controller
+
+entities.GrogsGarage/Ports/EntityCullController.placements.name.EntityCullController=Entity Cull Controller
+entities.GrogsGarage/Ports/EntityCullController.placements.description.EntityCullController=Disables entities within a given radius around the camera center. Useful for reducing lag in large/complex rooms.
+
+entities.GrogsGarage/Ports/EntityCullController.attributes.name.types=Whitelist
+entities.GrogsGarage/Ports/EntityCullController.attributes.name.cullRadius=Cull Radius
+
+entities.GrogsGarage/Ports/EntityCullController.attributes.description.types=A list of entity types to cull. Uses the <ModName>/<EntityName> format.
+entities.GrogsGarage/Ports/EntityCullController.attributes.description.cullRadius=Entities will be disabled if their *center* is >= this distance away from the camera.
+
+# Falling Lava
+
+entities.GrogsGarage/Ports/FallingLava.placements.name.FallingLava=Falling Lava
+entities.GrogsGarage/Ports/FallingLava.placements.description.FallingLava=Lava that starts at the top of the screen and falls down.
+
+entities.GrogsGarage/Ports/FallingLava.attributes.name.speed=Base Speed
+entities.GrogsGarage/Ports/FallingLava.attributes.name.rubberbandSpeed=Rubberbanding Speed
+entities.GrogsGarage/Ports/FallingLava.attributes.name.rubberbandAccel=Rubberbanding Acceleration
+entities.GrogsGarage/Ports/FallingLava.attributes.name.rubberbandDist=Rubberbanding Distance
+entities.GrogsGarage/Ports/FallingLava.attributes.name.enableRubberbanding=Rubberbanding
+
+
+entities.GrogsGarage/Ports/FallingLava.attributes.description.intro=Determines whether the lava rises up from below the bottom of the screen or starts already present near the bottom.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.speed=The speed of the lava when not rubberbanding.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.rubberbandSpeed=The target speed of the lava when rubberbanding.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.rubberbandAccel=The acceleration of the lava to its rubberbanding speed.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.rubberbandDist=How far the lava has to be from the player to start rubberbanding.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.enableRubberbanding=When this is true, the lava will speed up if it is a given distance away from the player.
+entities.GrogsGarage/Ports/FallingLava.attributes.description.pauseFlag=Flag that will halt the movement of the lava when true.
+
+
+# Flag If Entity Exists
+
+entities.GrogsGarage/Ports/FlagIfEntityExists.placements.name.FlagIfEntityExists=Set Flag if Entity Exists
+entities.GrogsGarage/Ports/FlagIfEntityExists.placements.description.FlagIfEntityExists=Sets a flag if the given entity type exists in the current room.
+
+entities.GrogsGarage/Ports/FlagIfEntityExists.attributes.description.entityName=The type of entity to listen for. Uses the <ModName>/<EntityName> format.
+entities.GrogsGarage/Ports/FlagIfEntityExists.attributes.description.flagName=The flag to set if the given type of entity exists in the room.
+
+# Flag When Player Collide Controller
+
+entities.GrogsGarage/Ports/FlagPlayerCollideController.placements.name.FlagWhenPlayerCollideController=Set Flag While Player Colliding Controller
+entities.GrogsGarage/Ports/FlagPlayerCollideController.placements.description.FlagWhenPlayerCollideController=Sets a flag to true if the player is currently colliding with a given type of entity.
+
+entities.GrogsGarage/Ports/FlagPlayerCollideController.attributes.name.types=Whitelist
+
+entities.GrogsGarage/Ports/FlagPlayerCollideController.attributes.description.flag=The flag to set when the player is colliding with the given entities.
+entities.GrogsGarage/Ports/FlagPlayerCollideController.attributes.description.types=The types to collide with. Uses the <ModName>/<EntityName> format (!! NOTE !! Only entities that are TRACKED will work with this controller.)
+
+# Force Camera Update Controller
+
+entities.GrogsGarage/Ports/ForceCameraUpdateController.placements.name.ForceCameraUpdateController=Force Camera Update Controller
+entities.GrogsGarage/Ports/ForceCameraUpdateController.placements.description.ForceCameraUpdateController=Sets Player.ForceCameraUpdate to true every frame.
+
+############
+# TRIGGERS #
+############
+
+# Boost
+
+triggers.GrogsGarage/Ports/BoostTrigger.placements.name.BoostTrigger=Boost Player Trigger
+triggers.GrogsGarage/Ports/BoostTrigger.placements.description.BoostTrigger=Adds/multiplies the player's speed in the given direction.
+
+triggers.GrogsGarage/Ports/BoostTrigger.attributes.description.boostAmount=How much to add/multiply the player's speed by.
+triggers.GrogsGarage/Ports/BoostTrigger.attributes.description.multiplicative=Whether to multiply the player's speed by the given value instead of adding.
+triggers.GrogsGarage/Ports/BoostTrigger.attributes.description.horizontal=Whether to affect the player's X speed instead of their Y speed.
+
+# Counter Flag
+
+triggers.GrogsGarage/Ports/CounterFlagTrigger.placements.name.CounterFlagTrigger=Counter to Flag Trigger
+triggers.GrogsGarage/Ports/CounterFlagTrigger.placements.description.CounterFlagTrigger=Sets a flag given a prefix and a counter's value.
+
+triggers.GrogsGarage/Ports/CounterFlagTrigger.attributes.description.prefix=The prefix of the flag to be set (For example, a prefix of "flag_" will set the flag "flag_<counter value>").
+triggers.GrogsGarage/Ports/CounterFlagTrigger.attributes.description.counter=The counter to read (For example, a counter of "score" will set the flag "<prefix><value of "score">").
+
+# Flag Toggle Lookout Blocker
+
+triggers.GrogsGarage/Ports/FlagToggleLookoutBlocker.placements.name.FlagToggleLookoutBlocker=Lookout Blocker (Flag Toggled)
+triggers.GrogsGarage/Ports/FlagToggleLookoutBlocker.placements.description.FlagToggleLookoutBlocker=A lookout blocker that only works if the given flag is set.
+
