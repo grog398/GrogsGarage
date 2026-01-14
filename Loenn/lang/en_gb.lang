@@ -93,6 +93,17 @@ entities.GrogsGarage/Ports/FlagPlayerCollideController.attributes.description.ty
 entities.GrogsGarage/Ports/ForceCameraUpdateController.placements.name.ForceCameraUpdateController=Force Camera Update Controller
 entities.GrogsGarage/Ports/ForceCameraUpdateController.placements.description.ForceCameraUpdateController=Sets Player.ForceCameraUpdate to true every frame.
 
+# Decal Cull Controller
+
+entities.GrogsGarage/DecalCullController.placements.name.DecalCullController=Decal Cull Controller
+entities.GrogsGarage/DecalCullController.placements.description.DecalCullController=Culls all decals within a range of depths/textures that are too far away from the camera center.
+
+entities.GrogsGarage/DecalCullController.attributes.description.textures=The list of textures to cull, relative to Gameplay/ (Ignored if left blank.)
+entities.GrogsGarage/DecalCullController.attributes.description.maxDepth=Decals with depths LESS than this but MORE than Min Depth will be culled.
+entities.GrogsGarage/DecalCullController.attributes.description.maxDepth=Decals with depths MORE than this but LESS than Max Depth will be culled.
+entities.GrogsGarage/DecalCullController.attributes.description.cullRadius=Decals will be culled if their *center* is >= this distance away from the camera.
+
+
 ############
 # TRIGGERS #
 ############
