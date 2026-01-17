@@ -103,6 +103,9 @@ entities.GrogsGarage/DecalCullController.attributes.description.maxDepth=Decals 
 entities.GrogsGarage/DecalCullController.attributes.description.maxDepth=Decals with depths MORE than this but LESS than Max Depth will be culled.
 entities.GrogsGarage/DecalCullController.attributes.description.cullRadius=Decals will be culled if their *center* is >= this distance away from the camera.
 
+# Force Disable Refill Flash
+entities.GrogsGarage/ForceDisableRefillFlash.placements.name.ForceDisableRefillFlash=Force Disable Refill Flash Controller
+entities.GrogsGarage/ForceDisableRefillFlash.placements.description.ForceDisableRefillFlash=Disables the white flash in Madeline's hair when she refills her dash.
 
 ############
 # TRIGGERS #
