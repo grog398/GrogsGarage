@@ -107,6 +107,10 @@ entities.GrogsGarage/DecalCullController.attributes.description.cullRadius=Decal
 entities.GrogsGarage/ForceDisableRefillFlash.placements.name.ForceDisableRefillFlash=Force Disable Refill Flash Controller
 entities.GrogsGarage/ForceDisableRefillFlash.placements.description.ForceDisableRefillFlash=Disables the white flash in Madeline's hair when she refills her dash.
 
+# Force Load Spinners
+entities.GrogsGarage/ForceLoadSpinners.placements.name.ForceLoadSpinners=Force Load Spinners Controller
+entities.GrogsGarage/ForceLoadSpinners.placements.description.ForceLoadSpinners=Forces offscreen spinners to be loaded.
+
 ############
 # TRIGGERS #
 ############

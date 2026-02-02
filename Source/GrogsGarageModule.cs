@@ -1,5 +1,6 @@
 ﻿using System;
 using Celeste.Mod.GrogsGarage.Entities.Ports;
+using Celeste.Mod.GrogsGarage.Entities;
 
 namespace Celeste.Mod.GrogsGarage;
 
@@ -29,9 +30,11 @@ public class GrogsGarageModule : EverestModule {
     public override void Load()
     {
         DeathRedirectController.Load();
+        ForceLoadSpinners.Load();
     }
 
     public override void Unload() {
         DeathRedirectController.Unload();
+        ForceLoadSpinners.Unload();
     }
 }
